@@ -26,11 +26,11 @@ FILES:${PN} = "${PLUGINPATH}"
 D_FILES_PN = "${D}${FILES:${PN}}"
 
 do_compile:append() {
-    cd ${S}
-    for f in $(find po -name *.po ); do
-        l=$(echo ${f%} | sed 's/\.po//' | sed 's/.*po\///')
-        mkdir -p locale/${l%}/LC_MESSAGES
-        msgfmt -o locale/${l%}/LC_MESSAGES/E2m3u2bouquet.mo $l.po
+    cd ${S}/po
+    for f in $(find . -name *.po ); do
+        l=$(echo ${f%} | sed 's/\.po$//' | sed 's/.*\///')
+        mkdir -p ../locale/${l%}/LC_MESSAGES
+        msgfmt -o ../locale/${l%}/LC_MESSAGES/E2m3u2bouquet.mo $l.po
     done
 }
 
