@@ -4,7 +4,7 @@ PACKAGECONFIG:append:pn-qtbase += " gles2 linuxfb"
 #IMAGE_CLASSES += "airdigitalemmc_image_single"
 IMAGE_CLASSES += "airdigital-emmc_image_multiboot"
 
-MACHINE_FEATURES += "qthbbtv qtstalker linuxwifi"
+MACHINE_FEATURES += "linuxwifi"
 
 IMAGE_FSTYPES += "airdigitalemmc"
 IMAGE_ROOTFS_SIZE ?= "589824"
